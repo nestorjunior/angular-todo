@@ -15,8 +15,8 @@
             <span class="badge badge-primary badge-pill">{{ todo.id }}</span>
             {{ todo.title }}
             <span class="text-right">
-              <button type="button" class="btn btn-secondary align-self-end">Done</button>
-            <button type="button" class="btn btn-secondary align-self-end">Remove</button>
+              <button *ngIf="!todo.done" type="button" class="btn btn-primary align-self-end">Done</button>
+              <button type="button" class="btn btn-primary align-self-end" (click)="remove(todo)">Remove</button>
             </span>
           </li>
         </ul>
