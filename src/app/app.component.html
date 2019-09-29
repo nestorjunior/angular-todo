@@ -1,3 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Angular TODO</a>
 </nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <div class="jumbotron">
+        <h5 class="display-3">{{ title }}</h5>
+        
+
+        <ul class="list-group">
+          <li *ngFor="let todo of todos" class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="badge badge-primary badge-pill">{{ todo.id }}</span>
+            {{ todo.title }}
+            <span class="text-right">
+              <button type="button" class="btn btn-secondary align-self-end">Done</button>
+            <button type="button" class="btn btn-secondary align-self-end">Remove</button>
+            </span>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
